@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body class="m-auto text-center">
+    <script src="./dist/index.js"></script>
+    <div class="border border-purple m-4" contenteditable oninput="setText(event)">Seu texto aqui</div>
+    <button id="btn" onclick="speak()" class="p-4 bg-purple-500 text-white rounded shadow">Falar</button>
+    <button onclick="cancel()" class="p-4 bg-purple-700 text-white rounded shadow">Parar</button>
+</body>
+
+</html>
