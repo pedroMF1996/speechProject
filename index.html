@@ -18,7 +18,7 @@
     </div>
     <div class="is-flex is-flex-direction-row is-justfy-content-center">
         <label for="rate" class="mr-2">Velocidade de leitura:</label>
-        <input type="number" step="0.01" value="1" id="rate" class="p-2 " onchange="atualizaVelocidade(this.value)" style="background-color: aliceblue;" />
+        <input type="number" min="-5" max="5" step="0.01" value="1" id="rate" class="p-2 " onchange="atualizaVelocidade(this.value)" style="background-color: aliceblue;" />
     </div>
 </body>
 
