@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+.letterSpacing {
+    letter-spacing: 0.2rem
+}
+
 .textBox {
     max-height: 45rem;
     padding: 0.5rem;
