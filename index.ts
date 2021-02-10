@@ -1,14 +1,24 @@
 const utterance = new SpeechSynthesisUtterance();
 utterance.lang = "pt-BR";
-utterance.rate = 1
+utterance.rate = 1;
+
+var statusLimparAutomatico: boolean = false;
 
 function atualizaVelocidade(rate){
   utterance.rate = rate;  
 }
 
+function atualizaLimparAutomatico(){
+  var limpar:HTMLInputElement = document.querySelector('#clean');
+  limpar.checked = !limpar.checked;
+  statusLimparAutomatico = limpar.checked;
+}
+
 function limpar(event){
-  var inputText = event.target;
-  inputText.innerText = "";
+  if(statusLimparAutomatico){
+    var inputText = event.target;
+    inputText.innerText = "";
+  }
   setText(event);
 }
 function speak(){
