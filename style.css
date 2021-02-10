@@ -5,6 +5,15 @@
     align-items: center;
 }
 
+.hoverBrilhante {
+    transition: filter 0.2s;
+}
+
+.hoverBrilhante:hover {
+    filter: brightness(1.25);
+    transition-timing-function: ease-in-out;
+}
+
 .zoom {
     transition: transform 0.2s;
 }
