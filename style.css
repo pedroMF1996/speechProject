@@ -5,8 +5,13 @@
     align-items: center;
 }
 
+.textBox {
+    max-height: 45rem;
+    padding: 0.5rem;
+    overflow-y: scroll;
+}
+
 .project-title {
-    margin-top: -1.25rem;
     font-size: 2.5rem;
 }
 
