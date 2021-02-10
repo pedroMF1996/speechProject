@@ -20,6 +20,10 @@ function limpar(event) {
 function speak() {
     speechSynthesis.speak(utterance);
 }
+function hoverNoSwitch(aplica) {
+    var span = document.querySelector('.slider.round');
+    span.style.transform = aplica ? 'scale(1.15)' : '';
+}
 function cancel() {
     speechSynthesis.cancel();
 }
