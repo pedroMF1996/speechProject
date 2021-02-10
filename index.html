@@ -18,10 +18,12 @@
 
 <body class="m-auto text-center">
     <script src="./dist/index.js"></script>
-    <div class="centro letterSpacing" style="min-height: 55rem;">
+    <div class="centro letterSpacing p-3" style="min-height: 55rem;">
         <div class="container">
             <h2 class="project-title">Projeto Palestra</h2>
-            <div class="border border-purple m-4 fontSize115 textBox mt-4 " contenteditable onfocus="limpar(event)" oninput="setText(event)">Seu texto aqui</div>
+            <div class="columns">
+                <div class="border border-purple m-4 fontSize115 textBox mt-4 column is-four-quarters-mobile" contenteditable onfocus="limpar(event)" oninput="setText(event)">Seu texto aqui</div>
+            </div>
             <div class="is-block mt-4">
                 <div class="is-flex is-flex-direction-row is-justify-content-center">
                     <button id="btn" onclick="speak()" class="p-4 bg-green-500 text-white rounded shadow mr-3 zoom hoverBrilhante">Falar</button>
