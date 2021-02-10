@@ -1,25 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projeto Palestra - A sua palestra particular">
+    <link rel="icon" type="./assets/svgtopng/readme-brands.png" sizes="16x16">
+    <meta name="description" content="Este site tem como finalidade ser um auxílio de leitura de textos longos, artigos, notícias e afins.">
+    <meta property="og:url" content="https://speech-project.netlify.app">
+    <meta name="msapplication-TileImage" content="./assets/svgtopng/readme-brands.png">
     <link rel="stylesheet" href="style.css">
-    <title>Speech Project</title>
+    <title>Projeto Palestra</title>
 </head>
 
 <body class="m-auto text-center">
     <script src="./dist/index.js"></script>
-    <div class="border border-purple m-4" contenteditable onfocus="limpar(event)" oninput="setText(event)">Seu texto aqui</div>
+    <div class="centro" style="min-height: 55rem;">
+        <div class="container">
+            <h2 class="project-title">Projeto Palestra</h2>
+            <div class="border border-purple m-4 fontSize115" contenteditable onfocus="limpar(event)" oninput="setText(event)">Seu texto aqui</div>
+            <div class="is-flex is-flex-direction-row is-justify-content-center mb-3">
+                <button id="btn" onclick="speak()" class="p-4 bg-green-500 text-white rounded shadow mr-3">Falar</button>
+                <button onclick="cancel()" class="p-4 bg-green-700 text-white rounded shadow">Parar</button>
+            </div>
+            <div class="is-flex is-flex-direction-row is-justfy-content-center">
+                <label for="rate" class="mr-2 fontSize115">Velocidade de leitura:</label>
+                <input type="number" min="-5" max="5" step="0.01" value="1" id="rate" class="p-2 " onchange="atualizaVelocidade(this.value)" style="background-color: aliceblue;" />
+            </div>
+        </div>
+    </div>
 
-    <div class="is-flex is-flex-direction-row is-justify-content-center mb-3">
-        <button id="btn" onclick="speak()" class="p-4 bg-purple-500 text-white rounded shadow mr-3">Falar</button>
-        <button onclick="cancel()" class="p-4 bg-purple-700 text-white rounded shadow">Parar</button>
-    </div>
-    <div class="is-flex is-flex-direction-row is-justfy-content-center">
-        <label for="rate" class="mr-2">Velocidade de leitura:</label>
-        <input type="number" min="-5" max="5" step="0.01" value="1" id="rate" class="p-2 " onchange="atualizaVelocidade(this.value)" style="background-color: aliceblue;" />
-    </div>
 </body>
 
 </html>

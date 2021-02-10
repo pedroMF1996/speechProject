@@ -1,1 +1,15 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.8.10/tailwind.min.css";
+.centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-title {
+    margin-top: -1.25rem;
+    font-size: 2.5rem;
+}
+
+.fontSize115 {
+    font-size: 1.15rem;
+}

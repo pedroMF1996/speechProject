@@ -1,6 +1,6 @@
 const utterance = new SpeechSynthesisUtterance();
 utterance.lang = "pt-BR";
-utterance.rate = 1.25;
+utterance.rate = 1
 
 function atualizaVelocidade(rate){
   utterance.rate = rate;  
@@ -122,6 +122,7 @@ function ajusteDePalavras(texto: string):string{
     text = text.replace(/microtasking/gi, 'microtésking');
     text = text.replace(/macrotarefa/gi, 'mácrotarefa');
     text = text.replace(/microtarefa/gi, 'mícrotarefa');
+    text = text.replace(/marketing/gi, 'márquetin');
     text = text.replace(/assincronamente/gi, 'assíncronamente');
     text = text.replace(/overhead/gi, 'over réd');
     text = text.replace(/maquina/gi, 'máquina');
