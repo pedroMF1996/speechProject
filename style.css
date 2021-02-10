@@ -5,6 +5,15 @@
     align-items: center;
 }
 
+.zoom {
+    transition: transform 0.2s;
+}
+
+.zoom:hover {
+    transform: scale(1.15);
+    transition-timing-function: ease-in-out;
+}
+
 .letterSpacing {
     letter-spacing: 0.2rem
 }

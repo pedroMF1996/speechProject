@@ -21,18 +21,18 @@
     <div class="centro letterSpacing" style="min-height: 55rem;">
         <div class="container">
             <h2 class="project-title">Projeto Palestra</h2>
-            <div class="border border-purple m-4 fontSize115 textBox mt-4" contenteditable onfocus="limpar(event)" oninput="setText(event)">Seu texto aqui</div>
+            <div class="border border-purple m-4 fontSize115 textBox mt-4 " contenteditable onfocus="limpar(event)" oninput="setText(event)">Seu texto aqui</div>
             <div class="is-block mt-4">
                 <div class="is-flex is-flex-direction-row is-justify-content-center">
-                    <button id="btn" onclick="speak()" class="p-4 bg-green-500 text-white rounded shadow mr-3">Falar</button>
-                    <button onclick="cancel()" class="p-4 bg-green-700 text-white rounded shadow">Parar</button>
+                    <button id="btn" onclick="speak()" class="p-4 bg-green-500 text-white rounded shadow mr-3 zoom">Falar</button>
+                    <button onclick="cancel()" class="p-4 bg-green-700 text-white rounded shadow zoom">Parar</button>
                 </div>
             </div>
             <div class="is-block mt-4">
                 <div class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center">
                     <div class="is-flex is-flex-direction-row is-align-items-center is-justfy-content-center">
                         <label for="rate" class="mr-2 fontSize115">Velocidade de leitura:</label>
-                        <input type="number" min="-5" max="5" step="0.01" value="1" id="rate" class="p-2 " onchange="atualizaVelocidade(this.value)" style="background-color: aliceblue;" />
+                        <input type="number" min="-5" max="5" step="0.01" value="1" id="rate" class="p-2 zoom" onchange="atualizaVelocidade(this.value)" style="background-color: aliceblue;" />
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                 <div class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center">
                     <div class="is-flex is-flex-direction-row is-align-items-center is-justfy-content-center">
                         <label for="clean" class="mr-2 fontSize115">Limpar automaticamente:</label>
-                        <div class="switch">
+                        <div class="switch zoom">
                             <input type="checkbox" id="clean" class="p-2 " style="background-color: aliceblue;" />
                             <span class="slider round" onclick="atualizaLimparAutomatico()"></span>
                         </div>
