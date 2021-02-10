@@ -20,8 +20,12 @@ function limpar(event) {
 function speak() {
     speechSynthesis.speak(utterance);
 }
+function hoverNoSelect(aplica) {
+    var span = document.querySelector('#langdiv');
+    span.style.transform = aplica ? 'scale(1.15)' : '';
+}
 function hoverNoSwitch(aplica) {
-    var span = document.querySelector('.slider.round');
+    var span = document.querySelector('#switchSpan');
     span.style.transform = aplica ? 'scale(1.15)' : '';
 }
 function cancel() {

@@ -25,8 +25,13 @@ function speak(){
   speechSynthesis.speak(utterance);
 }
 
+function hoverNoSelect(aplica){
+  var span:HTMLElement = document.querySelector('#langdiv');
+  span.style.transform = aplica?'scale(1.15)':'';
+}
+
 function hoverNoSwitch(aplica){
-  var span:HTMLElement = document.querySelector('.slider.round');
+  var span:HTMLElement = document.querySelector('#switchSpan');
   span.style.transform = aplica?'scale(1.15)':'';
 }
 

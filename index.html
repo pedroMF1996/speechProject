@@ -44,7 +44,7 @@
                         <label for="clean" class="fontSize115 mr-1" onmouseover="hoverNoSwitch(true)" onmouseout="hoverNoSwitch(false)">Limpar automaticamente:</label>
                         <div class="switch ">
                             <input type="checkbox" id="clean" class="p-2 " />
-                            <span class="slider round zoom" onclick="atualizaLimparAutomatico()"></span>
+                            <span id="switchSpan" class="slider round zoom" onclick="atualizaLimparAutomatico()"></span>
                         </div>
                     </div>
                 </div>
@@ -52,11 +52,13 @@
             <div class="is-block mt-4">
                 <div class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center">
                     <div class="is-flex is-flex-direction-row is-align-items-center is-justfy-content-center fontSize115 mr-1">
-                        <label for="lang">Linguagem:</label>
-                        <select name="linguagem" id="lang" onchange="selecionaLinguagem(this.value)" class="zoom">
-                            <option value="pt-BR" default>português</option>
-                            <option value="en-US">english</option>
-                        </select>
+                        <label for="lang" onmouseover="hoverNoSelect(true)" onmouseout="hoverNoSelect(false)">Linguagem:</label>
+                        <div class="select is-rounded zoom" id="langdiv">
+                            <select name="linguagem" id="lang" onchange="selecionaLinguagem(this.value)">
+                                <option value="pt-BR" default>português</option>
+                                <option value="en-US">english</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
