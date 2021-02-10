@@ -1,6 +1,14 @@
 var utterance = new SpeechSynthesisUtterance();
 utterance.lang = "pt-BR";
 utterance.rate = 1.25;
+function atualizaVelocidade(rate) {
+    utterance.rate = rate;
+}
+function limpar(event) {
+    var inputText = event.target;
+    inputText.innerText = "";
+    setText(event);
+}
 function speak() {
     speechSynthesis.speak(utterance);
 }
