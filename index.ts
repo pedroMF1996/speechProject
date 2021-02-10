@@ -31,8 +31,14 @@ function cancel(){
 
 function setText(event) {
   var text:string = event.target.innerText;
-  
-	utterance.text = corrigePronuncia(text).toUpperCase();
+  if(utterance.lang == 'pt-BR'){
+    text = corrigePronuncia(text).toUpperCase();
+  }
+	utterance.text =  text;
+}
+
+function selecionaLinguagem(linguagem){
+  utterance.lang = linguagem;
 }
 
 function corrigePronuncia(textoCru:string):string{
