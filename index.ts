@@ -85,8 +85,6 @@ function substituicaoDeIndexacaoPorPonto(texto: string):string{
   text = texto;
   var aux: string[] = text.split('• ');
   text = aux.join('. ');
-  aux = text.split('º ');
-  text = aux.join('. ');
   return text;
 }
 
@@ -128,8 +126,10 @@ function ajusteDeSiglas(texto: string):string{
   text = text.replace('n.º','número');
   text = text.replace('art.','Artigo');
   text = text.replace('(i)','Primeiro');
+  text = text.replace('I.','Primeiro');
   text = text.replace('V.','Quínto');
   text = text.replace('X.','Décimo');
+  text = text.replace('°.','º');
   text = text.replace('CCBs','C C Bs');
   return text;
 }
@@ -177,10 +177,14 @@ function ajusteDePalavras(texto: string):string{
     text = text.replace(/sobre/gi,'sôôbre');
     text = text.replace(/#/gi,'rach tég');
     text = text.replace(/visam/gi,'vísam');
+    text = text.replace(/tráfego/gi,'trááfego');
+    text = text.replace(/caia/gi,'cááia');
+    text = text.replace(/Pretende-se/gi,'Pretêênde-se');
     text = text.replace(/administrem/gi,'adminíístrem');
     text = text.replace(/workshops/gi,'uorque shóps');
     text = text.replace(/expostas/gi,'expóstas');
     text = text.replace(/Jantares/gi,'Jantáres');
+    text = text.replace(/duvidas/gi,'dúúvidas');
     text = text.replace(/contribuam/gi,'contribúúam');
     text = text.replace(/afete/gi,'afééte');
     text = text.replace(/íntegra/gi,'ííntegra');
