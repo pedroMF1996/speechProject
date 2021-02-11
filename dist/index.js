@@ -2,21 +2,24 @@ var utterance = new SpeechSynthesisUtterance();
 utterance.lang = "pt-BR";
 utterance.rate = 1;
 utterance.text = "Seu texto aqui";
-var limparInput = document.querySelector('#clean');
 var statusLimparAutomatico = false;
 function atualizaVelocidade(rate) {
     utterance.rate = rate;
 }
-function atualizaLimparAutomatico() {
-    limparInput.checked = !limparInput.checked;
-    if (limparInput.checked) {
-        limparInput.classList.add('ativo');
+function toogleLimparAutomatico(limpar) {
+    limpar.checked = !limpar.checked;
+    statusLimparAutomatico = limpar.checked;
+}
+function atualizaLimparAutomatico(limpar) {
+    var outerHTML = limpar.outerHTML;
+    var ativar = outerHTML.includes('checked');
+    if (ativar) {
+        limpar.classList.add('ativo');
     }
     else {
-        limparInput.classList.remove('ativo');
+        limpar.classList.remove('ativo');
     }
-    console.log(limparInput.checked);
-    statusLimparAutomatico = limparInput.checked;
+    statusLimparAutomatico = !statusLimparAutomatico;
 }
 function limpar(event) {
     if (statusLimparAutomatico) {

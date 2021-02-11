@@ -93,6 +93,10 @@ input:checked+.slider {
     background-color: #48BB78;
 }
 
+input:focus+.slider {
+    box-shadow: 0 0 1px #48BB78;
+}
+
 input.ativo+.slider {
     box-shadow: 0 0 1px #48BB78;
 }

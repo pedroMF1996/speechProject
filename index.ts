@@ -2,23 +2,26 @@ const utterance = new SpeechSynthesisUtterance();
 utterance.lang = "pt-BR";
 utterance.rate = 1;
 utterance.text = "Seu texto aqui";
-const limparInput:HTMLInputElement = document.querySelector('#clean');
 var statusLimparAutomatico: boolean = false;
 
 function atualizaVelocidade(rate){
   utterance.rate = rate;  
 }
 
-function atualizaLimparAutomatico(){
-  limparInput.checked = !limparInput.checked;
-  if(limparInput.checked){
-    limparInput.classList.add('ativo')
-  }else{
-    limparInput.classList.remove('ativo')
-  }
+function toogleLimparAutomatico(limpar:HTMLInputElement){
+  limpar.checked = !limpar.checked;
+  statusLimparAutomatico = limpar.checked;
+}
 
-  console.log(limparInput.checked)
-  statusLimparAutomatico = limparInput.checked;
+function atualizaLimparAutomatico(limpar:HTMLInputElement){
+  var outerHTML = limpar.outerHTML;
+  var ativar = outerHTML.includes('checked');
+  if(ativar){
+    limpar.classList.add('ativo');
+  }else{
+    limpar.classList.remove('ativo');
+  }
+  statusLimparAutomatico = !statusLimparAutomatico;
 }
 
 function limpar(event){
@@ -28,6 +31,7 @@ function limpar(event){
     setText(event);
   }
 }
+
 function speak(){
   speechSynthesis.speak(utterance);
 }
