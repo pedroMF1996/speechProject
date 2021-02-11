@@ -36,6 +36,7 @@
     max-height: 45rem;
     padding: 0.5rem;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .project-title {
