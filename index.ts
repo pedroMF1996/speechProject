@@ -121,6 +121,9 @@ function ajusteDeSiglas(texto: string):string{
   text = text.replace('R3000A',' R 3000 A');
   text = text.replace('MIPS','M I P S');
   text = text.replace('LU','L U');
+  text = text.replace('.br','ponto bêê r');
+  text = text.replace('P:','Pergunta:');
+  text = text.replace('R:','Respósta:');
   text = text.replace('n.º','número');
   return text;
 }
@@ -158,6 +161,25 @@ function ajusteDePalavras(texto: string):string{
     text = text.replace(/sinalize/gi,'sínalíze');
     text = text.replace(/buffer/gi,'bãffer');
     text = text.replace(/main/gi,'meín');
+    text = text.replace(/viabiliza/gi,'viabilÍza');
+    text = text.replace(/deste/gi,'dêste');
+    text = text.replace(/sobre/gi,'sôbre');
+    text = text.replace(/#/gi,'rach tég');
+    text = text.replace(/visam/gi,'vísam');
+    text = text.replace(/administrem/gi,'adminíístrem');
+    text = text.replace(/workshops/gi,'uorque shóps');
+    text = text.replace(/expostas/gi,'expóstas');
+    text = text.replace(/Jantares/gi,'Jantáres');
+    text = text.replace(/contribuam/gi,'contribúúam');
+    text = text.replace(/afete/gi,'afééte');
+    text = text.replace(/íntegra/gi,'ííntegra');
+    text = text.replace(/sogros/gi,'sôôgros');
+    text = text.replace(/inspira/gi,'înspííra');
+    text = text.replace(/comprometemos/gi,'compromêtêmos');
+    text = text.replace(/feedbacks/gi,'fide backs');
+    text = text.replace(/Buscamos/gi,'Buscâmos');
+    text = text.replace(/stakeholders/gi,'steiq rolders');
+    text = text.replace(/Códigode Conduta/gi,'Código de Conduta');
     text = text.replace(/macrotasking/gi,'macrotésking');
     text = text.replace(/multitasking/gi,'múltitasking');
     text = text.replace(/microtasking/gi, 'microtésking');
