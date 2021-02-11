@@ -121,10 +121,16 @@ function ajusteDeSiglas(texto: string):string{
   text = text.replace('R3000A',' R 3000 A');
   text = text.replace('MIPS','M I P S');
   text = text.replace('LU','L U');
+  text = text.replace('§','Parágrafo');
   text = text.replace('.br','ponto bêê r');
   text = text.replace('P:','Pergunta:');
   text = text.replace('R:','Respósta:');
   text = text.replace('n.º','número');
+  text = text.replace('art.','Artigo');
+  text = text.replace('(i)','Primeiro');
+  text = text.replace('V.','Quínto');
+  text = text.replace('X.','Décimo');
+  text = text.replace('CCBs','C C Bs');
   return text;
 }
 
@@ -143,10 +149,15 @@ function ajusteDePalavras(texto: string):string{
     text = text.replace(/sequencialmente/gi,'seqüencialmente');
     text = text.replace(/implementam/gi,'implemêntam');
     text = text.replace(/paralelos/gi,'paralélos');
+    text = text.replace(/caput/gi,'capítulo');
     text = text.replace(/multithreaded/gi,'multithrédi');
     text = text.replace(/Treadmarks/gi,'Tredmarks');
     text = text.replace(/providencia/gi,'prôvídêncíá');
     text = text.replace(/visa/gi, 'viza');
+    text = text.replace(/ocorram/gi, 'ocôôrram');
+    text = text.replace(/day trade/gi, 'dei treide');
+    text = text.replace(/pricing/gi, 'práicing');
+    text = text.replace(/equitativas/gi, 'ecuitativas');
     text = text.replace(/visando/gi,'vizando');
     text = text.replace(/Procedural/gi,'Prôcedúral');
     text = text.replace(/heterogêneos/gi,'heterojêneos');
@@ -163,7 +174,7 @@ function ajusteDePalavras(texto: string):string{
     text = text.replace(/main/gi,'meín');
     text = text.replace(/viabiliza/gi,'viabilÍza');
     text = text.replace(/deste/gi,'dêste');
-    text = text.replace(/sobre/gi,'sôbre');
+    text = text.replace(/sobre/gi,'sôôbre');
     text = text.replace(/#/gi,'rach tég');
     text = text.replace(/visam/gi,'vísam');
     text = text.replace(/administrem/gi,'adminíístrem');
