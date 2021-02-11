@@ -27,6 +27,11 @@
     letter-spacing: 0.2rem
 }
 
+#logo {
+    width: 5rem;
+    height: 5rem;
+}
+
 .textBox {
     max-height: 45rem;
     padding: 0.5rem;
