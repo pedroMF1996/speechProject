@@ -37,16 +37,16 @@
             </div>
             <div class="is-block mt-4">
                 <div class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center">
-                    <div class="is-flex is-flex-direction-row is-align-items-center is-justfy-content-center">
-                        <label for="rate" class="fontSize115 mr-1">Velocidade de leitura:</label>
+                    <div class="columns is-flex is-flex-direction-row is-align-items-center is-justfy-content-center">
+                        <label for="rate" class="column fontSize115 mr-1">Velocidade de leitura:</label>
                         <input type="number" min="-5" max="5" step="0.01" value="1" id="rate" class="p-2 zoom" onchange="atualizaVelocidade(this.value)" style="background-color: aliceblue;" />
                     </div>
                 </div>
             </div>
             <div class="is-block mt-4">
                 <div class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center">
-                    <div class="is-flex is-flex-direction-row is-align-items-center is-justfy-content-center">
-                        <label for="clean" class="fontSize115 mr-1" onclick="atualizaLimparAutomatico(limparInput)" onmouseover="hoverNoSwitch(true)" onmouseout="hoverNoSwitch(false)">Limpar automaticamente:</label>
+                    <div class="columns is-flex is-flex-direction-row is-align-items-center is-justfy-content-center">
+                        <label for="clean" class="column fontSize115 mr-1" onclick="atualizaLimparAutomatico(limparInput)" onmouseover="hoverNoSwitch(true)" onmouseout="hoverNoSwitch(false)">Limpar automaticamente:</label>
                         <div class="switch ">
                             <input type="checkbox" id="clean" class="cleanInput" class="p-2 " />
                             <span id="switchSpan" class="slider round zoom" onclick="toogleLimparAutomatico(limparInput)"></span>
@@ -56,13 +56,15 @@
             </div>
             <div class="is-block mt-4">
                 <div class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center">
-                    <div class="is-flex is-flex-direction-row is-align-items-center is-justfy-content-center fontSize115 mr-1">
-                        <label for="lang" onmouseover="hoverNoSelect(true)" onmouseout="hoverNoSelect(false)">Linguagem:</label>
-                        <div class="select is-rounded zoom" id="langdiv">
-                            <select name="linguagem" id="lang" onchange="selecionaLinguagem(this.value)">
-                                <option value="pt-BR" default>português</option>
-                                <option value="en-US">english</option>
-                            </select>
+                    <div class="columns is-flex is-flex-direction-row is-align-items-center is-justfy-content-center fontSize115 mr-1">
+                        <label for="lang" class="column" onmouseover="hoverNoSelect(true)" onmouseout="hoverNoSelect(false)">Linguagem:</label>
+                        <div class="column">
+                            <div class="select is-rounded zoom" id="langdiv">
+                                <select name="linguagem" id="lang" onchange="selecionaLinguagem(this.value)">
+                                    <option value="pt-BR" default>português</option>
+                                    <option value="en-US">english</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>

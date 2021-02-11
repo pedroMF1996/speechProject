@@ -121,6 +121,7 @@ function ajusteDeSiglas(texto: string):string{
   text = text.replace('R3000A',' R 3000 A');
   text = text.replace('MIPS','M I P S');
   text = text.replace('LU','L U');
+  text = text.replace('n.º','número');
   return text;
 }
 
@@ -149,7 +150,10 @@ function ajusteDePalavras(texto: string):string{
     text = text.replace(/heterogêneas/gi,'heterojêneas,');
     text = text.replace(/heterogêneas/gi,'heterojêneas');
     text = text.replace(/monitores/gi,'mônitôrês');
+    text = text.replace(/Compliance/gi,'Compláince');
+    text = text.replace('Icap','ÁIQUÉP');
     text = text.replace(/encontram-se/gi,'encôntram-se');
+    text = text.replace(/TPICAP/gi,'TÊ PÊ ÁIQUÉP');
     text = text.replace(/transputer/gi,'trânspíuter');
     text = text.replace(/sinalize/gi,'sínalíze');
     text = text.replace(/buffer/gi,'bãffer');
