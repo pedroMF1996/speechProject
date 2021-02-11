@@ -2,7 +2,7 @@ const utterance = new SpeechSynthesisUtterance();
 utterance.lang = "pt-BR";
 utterance.rate = 1;
 utterance.text = "Seu texto aqui";
-
+const limparInput:HTMLInputElement = document.querySelector('#clean');
 var statusLimparAutomatico: boolean = false;
 
 function atualizaVelocidade(rate){
@@ -10,18 +10,23 @@ function atualizaVelocidade(rate){
 }
 
 function atualizaLimparAutomatico(){
-  var limpar:HTMLInputElement = document.querySelector('#clean');
-  limpar.checked = !limpar.checked;
-  statusLimparAutomatico = limpar.checked;
+  limparInput.checked = !limparInput.checked;
+  if(limparInput.checked){
+    limparInput.classList.add('ativo')
+  }else{
+    limparInput.classList.remove('ativo')
+  }
+
+  console.log(limparInput.checked)
+  statusLimparAutomatico = limparInput.checked;
 }
 
 function limpar(event){
   if(statusLimparAutomatico){
     var inputText = event.target;
     inputText.innerText = "";
-    utterance.text = "";
+    setText(event);
   }
-  setText(event);
 }
 function speak(){
   speechSynthesis.speak(utterance);
