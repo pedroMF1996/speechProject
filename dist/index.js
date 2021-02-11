@@ -15,6 +15,7 @@ function limpar(event) {
     if (statusLimparAutomatico) {
         var inputText = event.target;
         inputText.innerText = "";
+        utterance.text = "";
     }
     setText(event);
 }
