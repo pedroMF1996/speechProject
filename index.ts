@@ -1,6 +1,7 @@
 const utterance = new SpeechSynthesisUtterance();
 utterance.lang = "pt-BR";
 utterance.rate = 1;
+utterance.text = "Seu texto aqui";
 
 var statusLimparAutomatico: boolean = false;
 
